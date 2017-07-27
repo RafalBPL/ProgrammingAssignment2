@@ -30,7 +30,7 @@ cacheSolve <- function(x,...){
      }
      # get matrix from makeCacheMatrix
      data <- x$get()
-     Inversematrix <- solve(data) %*% datas
+     Inversematrix <- solve(data, ...) %*% data
      x$setInverse(Inversematrix)
      Inversematrix
 }
